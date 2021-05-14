@@ -2,35 +2,35 @@
 #include<iostream>
 #include<string>
 
-class Overload {
+class Fraction {
 private:
 	int numerator, denaminator;
-	friend std::ostream& operator<< (std::ostream& out, const Overload& ovrl);
-	friend std::istream& operator>> (std::istream& in, Overload& ovrl);
+	friend std::ostream& operator<< (std::ostream& out, const Fraction& ovrl);
+	friend std::istream& operator>> (std::istream& in, Fraction& ovrl);
 public:
-	Overload();
-	Overload(int a1, int b1);
-	Overload(const Overload& lnk);
-	Overload(Overload&& llnk);
+	Fraction();
+	Fraction(int a1, int b1);
+	Fraction(const Fraction& lnk);
+	Fraction(Fraction&& llnk);
 
-	Overload operator= (Overload ovrl);
+	Fraction operator= (Fraction ovrl);
 
-	friend Overload operator* (const Overload& ovrl1, const Overload& ovrl2);
-	friend Overload operator/ (const Overload& ovrl1, const Overload& ovrl2);
-	friend Overload operator- (const Overload& ovrl1, const Overload& ovrl2);
-	friend Overload operator+ (const Overload& ovrl1, const Overload& ovrl2);
+	friend Fraction operator* (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend Fraction operator/ (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend Fraction operator- (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend Fraction operator+ (const Fraction& ovrl1, const Fraction& ovrl2);
 
-	Overload operator+= (const Overload& ovrl);
-	Overload operator-= (const Overload& ovrl);
-	Overload operator*= (const Overload& ovrl);
-	Overload operator/= (const Overload& ovrl);
+	Fraction operator+= (const Fraction& ovrl);
+	Fraction operator-= (const Fraction& ovrl);
+	Fraction operator*= (const Fraction& ovrl);
+	Fraction operator/= (const Fraction& ovrl);
 
-	friend bool operator== (const Overload& ovrl1, const Overload& ovrl2);
-	friend bool operator> (const Overload& ovrl1, const Overload& ovrl2);
-	friend bool operator< (const Overload& ovrl1, const Overload& ovrl2);
-	friend bool operator>= (const Overload& ovrl1, const Overload& ovrl2);
-	friend bool operator<= (const Overload& ovrl1, const Overload& ovrl2);
-	friend bool operator!= (const Overload& ovrl1, const Overload& ovrl2);
+	friend bool operator== (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend bool operator> (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend bool operator< (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend bool operator>= (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend bool operator<= (const Fraction& ovrl1, const Fraction& ovrl2);
+	friend bool operator!= (const Fraction& ovrl1, const Fraction& ovrl2);
 
 	explicit operator float() {
 		float a = numerator; float b = denaminator;
