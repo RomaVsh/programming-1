@@ -16,7 +16,7 @@ private:
 
 public:
 	timeDate(void);
-	timeDate(unsigned int day, mounth, year, hour, min, sec);
+	timeDate(unsigned day, unsigned mounth, unsigned year, unsigned hour, unsigned min, unsigned sec);
 	timeDate(const timeDate& num);
 	timeDate(timeDate&& link);
 
