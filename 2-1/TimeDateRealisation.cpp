@@ -1,11 +1,11 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include"timeDate.h"
+#include"TimeDate.h"
 
 timeDate::timeDate(void) {
 	dd = mm = yyyy = _hh = _mm = _ss = 0; 
 }; 
 
-timeDate::timeDate(unsigned int day, unsigned int mounth, unsigned int year, unsigned int hour, unsigned int min, unsigned int sec) : timeDate() {
+timeDate::timeDate(unsigned day, unsigned mounth, unsigned year, unsigned hour, unsigned min, unsigned sec) : timeDate() {
 	setmounth(mounth);		
 	setyear(year);			
 	setday(day);			
